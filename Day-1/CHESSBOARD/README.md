@@ -1,28 +1,24 @@
-# CHESSBOARD 
+# CHESSBOARD
 
 ## Problem Statement
 
-A standard chessboard consists of alternating **black** and **white** cells arranged in an 8×8 grid.
+Above is the standard representation of a chessboard.
 
-The board can be represented as a 2D Cartesian plane, where:
+This could be imagined as a 2D cartesian plane, with the x axis being represented by the alphabets and y axis by the numbers.
 
-- The **columns** are labeled using lowercase alphabets (`a` to `h`).
-- The **rows** are labeled using numbers (`1` to `8`).
-
-Given the coordinates of a cell as a string, determine whether the cell is **Black** or **White**.
+Given coordinates in the form of string, print if that cell is white or black.
 
 ---
 
 ## Input Format
 
-- The first line contains a string **s**, representing the coordinates of a cell.
+First line contains a string **`s`**.
 
 ---
 
 ## Output Format
 
-- Print **Black** if the given cell is black.
-- Print **White** if the given cell is white.
+White or Black.
 
 ---
 
@@ -32,13 +28,15 @@ Given the coordinates of a cell as a string, determine whether the cell is **Bla
 
 ---
 
-## Sample Input 1
+## Sample Testcase 0
+
+### Input
 
 ```text
 b2
 ```
 
-## Sample Output 1
+### Output
 
 ```text
 Black
@@ -46,17 +44,19 @@ Black
 
 ### Explanation
 
-The cell `b2` is a **Black** square on a standard chessboard.
+Self explanatory.
 
 ---
 
-## Sample Input 2
+## Sample Testcase 1
+
+### Input
 
 ```text
 a1
 ```
 
-## Sample Output 2
+### Output
 
 ```text
 Black
@@ -64,4 +64,4 @@ Black
 
 ### Explanation
 
-The cell `a1` is a **Black** square on a standard chessboard.
+We can clearly see **`a1`** is black in the diagram.
