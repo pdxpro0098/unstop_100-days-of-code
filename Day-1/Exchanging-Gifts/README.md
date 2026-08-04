@@ -2,9 +2,7 @@
 
 ## Problem Statement
 
-The royal family exchanges gifts at Christmas, where the **youngest member** receives gifts from everyone else but does not give any gifts.
-
-Given the details of all the exchanged gifts among the family members, determine the youngest member of the family.
+The royal family exchanges gifts at Christmas, where the youngest member receives gifts from everyone but doesn't give any gifts. Given the data for all the exchanged gifts among the family members, you need to identify the youngest member, who is the one receiving gifts from everyone but not giving any.
 
 > **Note:** A family member does not give more than one gift to the same member.
 
@@ -12,24 +10,25 @@ Given the details of all the exchanged gifts among the family members, determine
 
 ## Input Format
 
-- The first line contains two integers **`n`** and **`m`**, representing the number of family members and the number of gifts exchanged.
-- The next **`m`** lines each contain two integers **`aᵢ`** and **`bᵢ`**, where **`aᵢ`** gave a gift to **`bᵢ`**.
+The first line of the input contains two integers **`n`** and **`m`** denoting the number of family members and the number of gifts that were exchanged.
+
+The next **`m`** lines contain two integers each. In the **`i`**th line, two integers **`aᵢ`**, **`bᵢ`** represent that a gift was given by **`aᵢ`** to **`bᵢ`**.
 
 ---
 
 ## Output Format
 
-Print a single integer representing the youngest member of the family.
+Print a single integer, the number that represents the youngest member of the family.
 
-If no such member exists, print **`-1`**.
+If no such member is found, print **`-1`** instead.
 
 ---
 
 ## Constraints
 
-- `1 ≤ n ≤ 10⁴`
-- `0 ≤ m ≤ 10⁵`
-- `1 ≤ aᵢ, bᵢ ≤ n`
+- `1 <= n <= 10^4`
+- `0 <= m <= 10^5`
+- `1 <= aᵢ, bᵢ <= n`
 
 ---
 
@@ -50,7 +49,7 @@ If no such member exists, print **`-1`**.
 
 ### Explanation
 
-Family member **1** gave a gift to family member **2**. Member **2** did not give any gifts and received a gift from every other member. Therefore, **2** is the youngest member.
+Family member **1** gave a gift to family member **2**. Now, we can see that **2** did not give any gift to anyone but received a gift from all other members (member **1**). Hence, **2** is the youngest member.
 
 ---
 
@@ -72,4 +71,4 @@ Family member **1** gave a gift to family member **2**. Member **2** did not giv
 
 ### Explanation
 
-Member **3** received gifts from members **1** and **2** and did not give any gifts to anyone. Therefore, **3** is the youngest member.
+We can see that **3** received gifts from **1** and **2** but did not give any gifts to anyone. Therefore, **3** must be the youngest member.
