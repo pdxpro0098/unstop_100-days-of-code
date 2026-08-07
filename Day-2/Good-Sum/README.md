@@ -15,30 +15,32 @@ Continue processing the remaining elements using the updated array after each op
 
 Return the sum of all elements present in the array after all operations have been completed.
 
-> **Note:**
+> **Note**
+>
 > - Perform an operation only when the current element is negative.
 > - For every negative element, use the latest modified version of the array.
-> - The removed elements must be consecutive and immediately precede the negative element.
+> - The elements removed must be consecutive and immediately precede the negative element.
 
 ---
 
 ## Input Format
 
-- The first line contains an integer **`N`**.
-- The second line contains **`N`** space-separated integers representing the array elements.
+The first line contains an integer **`N`**.
+
+The second line contains **`N`** elements - the array elements.
 
 ---
 
 ## Output Format
 
-Print a single integer representing the final sum of all elements after performing the required operations.
+The output should return the final sum after performing the mentioned operation.
 
 ---
 
 ## Constraints
 
-- `1 ≤ N ≤ 10^5`
-- `-10^4 ≤ A[i] ≤ 10^4`
+- `1 <= N <= 10^5`
+- `-10^4 <= A[i] <= 10^4` for all `0 <= i < N`
 
 ---
 
