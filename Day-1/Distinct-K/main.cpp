@@ -1,31 +1,41 @@
-#include <iostream>
-#include <vector>
-#include <map>
-
+#include <bits/stdc++.h>
 using namespace std;
 
-void find_youngest_member(int n, int m, vector<pair<int, int>> &gifts)
+string findKthDistinct(vector<string> &arr, int k)
 {
-    if (m == 0){
-        cout << n;
-        return;
+    unordered_map<string, int> freq;
+
+    for (auto str : arr)
+    {
+        freq[str]++;
     }
 
-    map<int, int> count;
-
-    for (auto p : gifts)
+    for (auto str : arr)
     {
-        count[p.second]++;
-    }
-
-    for (auto p : count)
-    {
-        if (p.second == n - 1)
+        if (freq[str] == 1)
         {
-            cout << p.first;
-            return;
+            if (k == 1)
+                return str;
+            k--;
         }
     }
+    return "-1";
+}
 
-    cout << -1;
+int main()
+{
+    int N;
+    cin >> N;
+
+    vector<string> arr(N);
+
+    for (int i = 0; i < N; i++)
+        cin >> arr[i];
+
+    int k;
+    cin >> k;
+
+    cout << findKthDistinct(arr, k);
+
+    return 0;
 }
