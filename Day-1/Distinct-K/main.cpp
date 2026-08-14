@@ -1,4 +1,6 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
+#include <unordered_map>
 using namespace std;
 
 string findKthDistinct(vector<string> &arr, int k)
@@ -20,22 +22,4 @@ string findKthDistinct(vector<string> &arr, int k)
         }
     }
     return "-1";
-}
-
-int main()
-{
-    int N;
-    cin >> N;
-
-    vector<string> arr(N);
-
-    for (int i = 0; i < N; i++)
-        cin >> arr[i];
-
-    int k;
-    cin >> k;
-
-    cout << findKthDistinct(arr, k);
-
-    return 0;
 }

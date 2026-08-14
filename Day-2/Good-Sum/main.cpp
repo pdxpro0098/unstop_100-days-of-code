@@ -1,12 +1,38 @@
-// def good_sum(N, A):
-//     arr = A
-//     stk = []
-//     for i in range(N):
-//         if arr[i] > 0:
-//             stk.append(arr[i])
-//         else:
-//             s = 0
-//             while stk and s < abs(arr[i]):
-//                 s += stk.pop()
-//             stk.append(abs(arr[i]))
-//     return sum(stk)
+#include <iostream>
+#include <vector>
+#include <stack>
+
+using namespace std;
+
+int good_sum(int N, vector<int> &A)
+{
+    stack<int> stk;
+
+    for (int val : A)
+    {
+        if (val > 0)
+        {
+            stk.push(val);
+        }
+        else
+        {
+            int sum = 0;
+            while (!stk.empty() && sum < abs(val))
+            {
+                sum += stk.top();
+                stk.pop();
+            }
+            stk.push(abs(val));
+        }
+    }
+
+    int s = 0;
+    while (!stk.empty())
+    {
+
+        s += stk.top();
+        stk.pop();
+    }
+
+    return s;
+}
