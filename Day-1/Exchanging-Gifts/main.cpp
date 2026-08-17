@@ -2,14 +2,16 @@
 #include <vector>
 #include <map>
 
-void find_youngest_member(int n, int m, std::vector<std::pair<int, int>> &gifts)
+using namespace std;
+
+void find_youngest_member(int n, int m, vector<pair<int, int>> &gifts)
 {
     if (m == 0){
-        std::cout << n;
+        cout << n;
         return;
     }
 
-    std::map<int, int> count;
+    map<int, int> count;
 
     for (auto p : gifts)
     {
@@ -20,10 +22,10 @@ void find_youngest_member(int n, int m, std::vector<std::pair<int, int>> &gifts)
     {
         if (p.second == n - 1)
         {
-            std::cout << p.first;
+            cout << p.first;
             return;
         }
     }
 
-    std::cout << -1;
+    cout << -1;
 }
